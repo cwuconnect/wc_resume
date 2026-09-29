@@ -8,7 +8,7 @@ A deliberately fake and funny resume template featuring **Wild Chicken Universit
 
 - `wild_chicken_resume.docx` — editable Microsoft Word resume
 - `wild_chicken_resume.pdf` — PDF version
-- `resume.tex` — optional LaTeX source if you add the original template to the repository
+- `wild_chicken_resume.tex` — optional LaTeX source if you add the original template to the repository
 - `README.md` — repository guide
 
 ## Sample profile
