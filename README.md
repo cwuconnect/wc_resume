@@ -37,7 +37,7 @@ For a real application, remove fictional claims and use only metrics and accompl
 ```text
 wild-chicken-resume/
 ├── README.md
-├── resume.tex
+├── wild_chicken_resume.tex
 ├── wild_chicken_resume.docx
 └── wild_chicken_resume.pdf
 ```
