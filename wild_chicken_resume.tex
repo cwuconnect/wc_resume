@@ -1,0 +1,352 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+
+% ============================================================
+% WILD CHICKEN UNIVERSITY RESUME TEMPLATE
+% ============================================================
+%
+% NOTE:
+% Everything in this resume is FAKE.
+% The names, university, companies, degrees, projects, and
+% accomplishments are intentionally ridiculous examples.
+%
+% Replace the chicken nonsense with your real information
+% before applying for an actual job. :)
+%
+% ============================================================
+
+% ============================================================
+% PACKAGES / STYLE
+% ============================================================
+
+\usepackage[T1]{fontenc}
+\usepackage[default,semibold]{sourcesanspro}
+\usepackage[10pt]{moresize}
+\usepackage{anyfontsize}
+\usepackage{csquotes}
+
+% Page margins
+\usepackage[margin=.5in, top=.5in, bottom=.7in]{geometry}
+\raggedright
+\raggedbottom
+
+% Resume highlight color
+\usepackage{xcolor}
+\definecolor{highlight}{RGB}{61,90,128}
+
+% Clickable links
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=highlight
+}
+
+% Lists
+\usepackage[inline]{enumitem}
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\usepackage[nostruts]{titlesec}
+
+\titlespacing*{\section}
+    {0em}
+    {0.5em}
+    {0em}
+
+\titleformat{\section}
+    {\color{highlight}\scshape\raggedright\large}
+    {}
+    {0em}
+    {}
+    [\vspace{-0.75em}\hrulefill]
+
+% Subsection formatting
+\titlespacing*{\subsection}
+    {0em}
+    {0em}
+    {0em}
+
+\titleformat{\subsection}
+    {\bfseries}
+    {}
+    {0em}
+    {}
+
+% Header
+\usepackage{fancyhdr}
+
+% ============================================================
+% CUSTOM COMMANDS
+% ============================================================
+
+% Bold skill-category labels
+\newcommand{\skills}[1]{{\bfseries #1}}
+
+% Italic secondary information underneath a job/project title
+\newcommand{\subtext}[1]{
+    \textit{#1}\par\vspace{-.5em}
+}
+
+% Compact bullet list
+\setlist[itemize]{
+    align=parleft,
+    left=0pt..1em
+}
+
+\newenvironment{zitemize}
+{
+    \begin{itemize}
+        \itemsep 0pt
+        \parskip 0pt
+        \parsep 1pt
+}
+{
+    \end{itemize}
+    \vspace{-.5em}
+}
+
+% Remove page numbers
+\pagenumbering{gobble}
+
+% ============================================================
+% CONTACT INFORMATION
+% ============================================================
+%
+% Replace these values with your real information.
+%
+% For LinkedIn and GitHub, enter ONLY your username.
+%
+% Example:
+% \def\LinkedIn{john-smith}
+% \def\GitHub{johnsmith}
+%
+% ============================================================
+
+\def\name{John ``Cluck'' Smith}
+\def\phone{+1 (555) 123-CLUCK}
+\def\email{john.smith@wildchicken.fake}
+\def\LinkedIn{john-cluck-smith}
+\def\GitHub{cluckmaster3000}
+
+% Professional title displayed underneath your name
+\def\role{Chicken Scientist | Poultry Engineer | Egg Enthusiast}
+
+% ============================================================
+% FIRST PAGE HEADER
+% ============================================================
+
+\fancypagestyle{first_page}{
+
+    \fancyhf{}
+
+    % Name and professional title
+    \lhead{
+        {\Huge\bfseries \name}\\[0.3em]
+        {\color{highlight}\Large \role}
+    }
+
+    % Contact information
+    \rhead{
+        \phone\\
+        \href{mailto:\email}{\email}\\
+        \href{https://www.linkedin.com/in/\LinkedIn}
+            {linkedin.com/in/\LinkedIn}\\
+        \href{https://github.com/\GitHub}
+            {github.com/\GitHub}
+    }
+
+    % Colored line underneath header
+    \renewcommand{\headrulewidth}{1pt}
+
+    \renewcommand{\headrule}{
+        \hbox to\headwidth{
+            \color{highlight}
+            \leaders\hrule height \headrulewidth
+            \hfill
+        }
+    }
+
+    \setlength{\headheight}{90pt}
+    \setlength{\headsep}{5pt}
+}
+
+% Header style for additional pages
+\fancypagestyle{others}{
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \setlength{\headheight}{30pt}
+    \setlength{\headsep}{5pt}
+}
+
+% ============================================================
+% DOCUMENT
+% ============================================================
+
+\begin{document}
+
+\pagestyle{others}
+\thispagestyle{first_page}
+
+% ============================================================
+% SUMMARY
+% ============================================================
+
+Motivated Chicken Science graduate from Wild Chicken University with
+expertise in advanced cluckology, poultry analytics, and data-driven
+egg production. Experienced in solving high-impact barnyard problems,
+optimizing chicken-crossing strategies, and translating complicated
+``bok bok'' requirements into measurable business outcomes. Passionate
+about building a future where every chicken can cross the road safely,
+efficiently, and with statistically significant confidence.
+
+% ============================================================
+% EXPERIENCE
+% ============================================================
+
+\section{Experience}
+
+\subsection{Senior Chicken Operations Specialist \hfill Jan 2023 --- Present}
+
+\subtext{Kentucky Fake Chicken Corporation \hfill Cluckington, Coop Country}
+
+\begin{zitemize}
+    \item Managed daily operations for a high-performance flock of
+    500+ chickens while maintaining a strict zero-fox security policy.
+
+    \item Developed an automated feeding optimization system that
+    allegedly increased chicken happiness by 47\%, according to a
+    completely imaginary internal survey.
+
+    \item Reduced average road-crossing time from 14 minutes to
+    3 minutes by introducing Agile Chicken Crossing methodology.
+
+    \item Mentored 12 junior chickens in leadership, communication,
+    seed prioritization, and professional clucking.
+\end{zitemize}
+
+\subsection{Junior Poultry Data Analyst \hfill Jan 2019 --- Dec 2022}
+
+\subtext{Clucklytics Inc. \hfill Eggmonton, Coop Country}
+
+\begin{zitemize}
+    \item Analyzed millions of fictional ``bok bok'' records to identify
+    previously unknown patterns in chicken communication.
+
+    \item Built dashboards tracking egg production, feed consumption,
+    nap frequency, and suspicious rooster activity.
+
+    \item Automated weekly poultry reports with Python, saving the team
+    approximately 20 hours of unnecessary spreadsheet clucking per month.
+
+    \item Presented analytical findings to senior management despite
+    management consisting primarily of three chickens in a trench coat.
+\end{zitemize}
+
+% ============================================================
+% PROJECTS
+% ============================================================
+
+\section{Projects}
+
+\subsection{
+    Why Did the Chicken Cross the Road?
+    \textbar{} Python, PyTorch, ChickenVision
+    \hfill Mar 2026 --- Sep 2026
+}
+
+\subtext{Wild Chicken University \hfill Coop City, Coop Country}
+
+\begin{zitemize}
+    \item Developed a machine-learning model to predict whether a chicken
+    would cross the road based on traffic, weather, seed availability,
+    and existential motivation.
+
+    \item Trained the model using 10,000 completely fictional chicken
+    crossings and achieved 99.7\% accuracy on an equally fictional test set.
+
+    \item Built a computer-vision pipeline capable of distinguishing
+    chickens from ducks with almost embarrassing confidence.
+
+    \item Concluded that the chicken crossed the road primarily to
+    improve model generalization.
+\end{zitemize}
+
+% ============================================================
+% SKILLS
+% ============================================================
+
+\section{Skills}
+
+\begin{tabular}{
+    @{}
+    p{14em}
+    p{\dimexpr\linewidth-14em\relax}
+    @{}
+}
+
+\skills{Programming}
+&
+Python, SQL, C, Bok++
+\\[0.15em]
+
+\skills{Chicken Learning}
+&
+Machine Learning, Deep Learning, Statistical Modeling,
+Egg Forecasting, Poultry Recognition
+\\[0.15em]
+
+\skills{Data Engineering}
+&
+Apache Airflow, Databricks, Spark, MLflow, Git, Chicken Pipelines
+\\[0.15em]
+
+\skills{Poultry Technologies}
+&
+ChickenVision, CoopDB, Eggcel, Power BI, Feed Optimization
+\\[0.15em]
+
+\skills{Professional Skills}
+&
+Teamwork, Communication, Leadership, Problem Solving,
+Advanced Clucking
+\\
+
+\end{tabular}
+
+% ============================================================
+% EDUCATION
+% ============================================================
+
+\section{Education}
+
+\textbf{Master of Chicken, Advanced Poultry Analytics}
+--- \textit{Wild Chicken University}
+\hfill 2024 --- 2026 | Coop City, Coop Country
+\vspace{3pt}
+
+\textbf{Bachelor of Chicken, Applied Cluckology}
+--- \textit{Wild Chicken University}
+\hfill 2020 --- 2024 | Coop City, Coop Country
+
+% ============================================================
+% END OF RESUME
+% ============================================================
+%
+% BEFORE USING THIS TEMPLATE FOR A REAL APPLICATION:
+%
+% [ ] Replace John "Cluck" Smith
+% [ ] Replace fake phone number
+% [ ] Replace fake email
+% [ ] Replace LinkedIn
+% [ ] Replace GitHub
+% [ ] Replace Wild Chicken University
+% [ ] Replace fake companies
+% [ ] Replace fake projects
+% [ ] Replace fake skills
+% [ ] Replace fake dates and locations
+% [ ] Proofread everything
+% [ ] Remove excessive poultry references
+%
+% ============================================================
+
+\end{document}
